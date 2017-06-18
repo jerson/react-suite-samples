@@ -39,3 +39,7 @@ same as a normal react native project
 
      cd android && ./gradlew assembleRelease  
     
+## links
+
+- [react-suite](https://github.com/jerson/react-suite)
+- [react-suite-boilerplate](https://github.com/jerson/react-suite-boilerplate)
