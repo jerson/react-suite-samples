@@ -34,7 +34,7 @@ export default class MainScene extends React.Component<Props, State> {
           <Title size='normal'>{_('Installation')}</Title>
           <ViewSpacer spacing={5} />
           <Text>
-            npm: <Strong>npm install -g react-suite</Strong>
+            npm: <Strong>npm install -s react-suite</Strong>
           </Text>
           <Text>
             yarn: <Strong>yarn add react-suite</Strong>
