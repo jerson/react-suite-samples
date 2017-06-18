@@ -1,5 +1,7 @@
 # react-suite-samples
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/gpardogamez)
+
 samples for https://github.com/jerson/react-suite
 
 ![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/sample.png)
