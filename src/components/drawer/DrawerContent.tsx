@@ -197,7 +197,7 @@ export default class DrawerContent extends React.Component<Props, State> {
     let items = this.getItems();
 
     let logo = {
-      uri: 'https://github.com/jerson/react-suite/raw/master/docs/logo.png'
+      uri: 'https://image.ibb.co/k8c9Nk/logo.png'
     };
 
     return (
