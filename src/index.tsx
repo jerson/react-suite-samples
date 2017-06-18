@@ -47,7 +47,6 @@ export default class App extends React.Component<Props, State> {
         <Main>
           <Drawer useTabledMode content={<DrawerContent />}>
             <Router.Switch>
-              <Router.Route exact path='/' component={MainScene} />
               <Router.Route path='/view' component={ViewScene} />
               <Router.Route
                 path='/linear-gradient'
@@ -99,6 +98,7 @@ export default class App extends React.Component<Props, State> {
                 path='/preference-storage'
                 component={PreferenceStorageScene}
               />
+              <Router.Route component={MainScene} />
             </Router.Switch>
           </Drawer>
         </Main>
