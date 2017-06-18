@@ -1,0 +1,4 @@
+<resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">x9Wl7xJygdFwX_-ypYcSz3hsBCEj7314e838-87bb-4c98-ad1a-749779553b3c</string>
+    <string name="app_name">React Suite Samples</string>
+</resources>

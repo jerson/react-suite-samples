@@ -1,0 +1,16 @@
+{
+  "presets": [
+    "react-native"
+  ],
+  "sourceMaps": true,
+  "plugins": [
+    [
+      "react-hot-loader/babel",
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ]
+  ]
+}
