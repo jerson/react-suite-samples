@@ -11,9 +11,9 @@ module.exports = {
         extensions: ['.webpack.js', '.web.js', '.js'],
     },
     output: {
-        path: path.join(__dirname, 'dist/web'),
+        path: path.join(__dirname, 'docs'),
         filename: 'static/app.[hash].js',
-        publicPath: '/'
+        publicPath: '/react-suite-samples/'
     },
     plugins: [
         new webpack.DefinePlugin({
