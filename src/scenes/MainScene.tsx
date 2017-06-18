@@ -6,6 +6,7 @@ import Title from 'react-suite/build/components/ui/Title';
 import Text from 'react-suite/build/components/ui/Text';
 import ViewSpacer from 'react-suite/build/components/ui/ViewSpacer';
 import Strong from '../ui/Strong';
+import Image from 'react-suite/build/components/ui/Image';
 
 const PropTypes = require('prop-types');
 
@@ -24,7 +25,14 @@ export default class MainScene extends React.Component<Props, State> {
       <SceneContainer>
         <Header title={_('React Suite Samples')} />
         <Container>
-          <Title center size='large'>{_('Welcome')}</Title>
+          <Image
+            source={{
+              uri:
+                'https://github.com/jerson/react-suite/raw/master/docs/logo.png'
+            }}
+            resizeMode={'contain'}
+            style={{ width: 150, height: 100, alignSelf: 'center' }}
+          />
           <Text>
             {_(
               'react-suite, is a collection of components and modules build on top react-native and react-native-web made with typescript for build apps for Android, IOS and Web with the same code, this example proyect was made with react-suite.'

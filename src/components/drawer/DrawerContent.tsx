@@ -217,6 +217,7 @@ export default class DrawerContent extends React.Component<Props, State> {
 
 const styles = StyleSheet.create({
   header: {
+    flexDirection: 'row',
     backgroundColor: '#fff',
     paddingTop: 10
   } as ViewStyle,
