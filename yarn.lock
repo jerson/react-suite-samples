@@ -5551,9 +5551,9 @@ react-router@^4.1.1:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
-react-suite@^0.0.136-dev:
-  version "0.0.136-dev"
-  resolved "https://registry.yarnpkg.com/react-suite/-/react-suite-0.0.136-dev.tgz#d70c4be34ca410da761cf6dbcdc1a3d59019f1d0"
+react-suite@^0.0.137-dev:
+  version "0.0.137-dev"
+  resolved "https://registry.yarnpkg.com/react-suite/-/react-suite-0.0.137-dev.tgz#e50f6280da400ef86c789b839f235dc00f5e51be"
   dependencies:
     pubsub-js "^1.5.7"
     qs "^6.4.0"

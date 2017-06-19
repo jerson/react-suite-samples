@@ -14,6 +14,7 @@ import SamplesContainer from '../../ui/SamplesContainer';
 import ComponentContainer from '../../ui/ComponentContainer';
 import Hightlight from '../../ui/Hightlight';
 import Code from '../../ui/Code';
+import View from 'react-suite/build/components/ui/View';
 
 export interface Props {}
 
@@ -43,18 +44,29 @@ export default class LoadingScene extends React.Component<Props, State> {
           <SamplesContainer>
             <Title size='normal'>{_('Examples')}</Title>
             <ViewSpacer />
-            <Text>{_('Basic')}</Text>
 
+            <Text>{_('Basic')}</Text>
             <Loading size='small' />
             <Code language='html'>
               {`<Loading size='small' />`}
             </Code>
-            <ViewSpacer />
-            <Text>{_('Large')}</Text>
 
+            <ViewSpacer />
+
+            <Text>{_('Large')}</Text>
             <Loading size='large' />
             <Code language='html'>
               {`<Loading size='large' />`}
+            </Code>
+
+            <ViewSpacer />
+
+            <Text>{_('Custom size')}</Text>
+            <View style={{ alignSelf: 'center' }}>
+              <Loading size={14} />
+            </View>
+            <Code language='html'>
+              {`<Loading size={14} />`}
             </Code>
 
           </SamplesContainer>
@@ -64,7 +76,7 @@ export default class LoadingScene extends React.Component<Props, State> {
           <PropertiesContainer>
             <Title size='normal'>{_('Properties')}</Title>
             <Code>
-              {`interface ActivityIndicatorProps {
+              {`interface LoadingProps {
     style?: ViewStyle;
     inverted?: boolean;
     size: 'small' | 'large' | number;

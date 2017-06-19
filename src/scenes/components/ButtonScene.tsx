@@ -47,23 +47,152 @@ export default class ButtonScene extends React.Component<Props, State> {
 
           <SamplesContainer>
             <Title size='normal'>{_('Examples')}</Title>
-            <ViewSpacer />
-            <Text>{_('Basic')}</Text>
-            <Button onPress={this.onClick.bind(this)} title='Simple' />
 
-            <Code language='html'>
-              {`<Button onPress={this.onClick.bind(this)} title='Simple' />`}
-            </Code>
             <ViewSpacer />
+
+            <Text>{_('Basic')}</Text>
+            <Button
+              onPress={this.onClick.bind(this)}
+              title={_('Sample text')}
+            />
+            <Code language='html'>
+              {`<Button onPress={this.onClick.bind(this)} title='Sample' />`}
+            </Code>
+
+            <ViewSpacer />
+
             <Text>{_('Loading')}</Text>
             <Button
               isLoading
               onPress={this.onClick.bind(this)}
-              title='Loading state'
+              title={_('Sample text')}
             />
-
             <Code language='html'>
-              {`<Button isLoading onPress={this.onClick.bind(this)} title='Loading state' />`}
+              {`<Button isLoading onPress={this.onClick.bind(this)} title='Sample text' />`}
+            </Code>
+
+            <ViewSpacer />
+
+            <Text>{_('Text with icon')}</Text>
+            <Button
+              icon='refresh'
+              onPress={this.onClick.bind(this)}
+              title={_('Sample text')}
+            />
+            <Code language='html'>
+              {`<Button icon='refresh' onPress={this.onClick.bind(this)} title='Sample text' />`}
+            </Code>
+
+            <ViewSpacer />
+
+            <Text>{_('Primary')}</Text>
+            <Button
+              icon='favorite'
+              type='primary'
+              onPress={this.onClick.bind(this)}
+              title={_('Sample text')}
+            />
+            <Code language='html'>
+              {`<Button icon='favorite' type='primary' onPress={this.onClick.bind(this)} title='Sample text' />`}
+            </Code>
+            <ViewSpacer />
+
+            <Text>{_('Danger')}</Text>
+            <Button
+              icon='home'
+              type='danger'
+              onPress={this.onClick.bind(this)}
+              title={_('Sample text')}
+            />
+            <Code language='html'>
+              {`<Button icon='home' type='danger' onPress={this.onClick.bind(this)} title='Sample text' />`}
+            </Code>
+            <ViewSpacer />
+
+            <Text>{_('Warning')}</Text>
+            <Button
+              icon='cloud_download'
+              type='warning'
+              onPress={this.onClick.bind(this)}
+              title={_('Sample text')}
+            />
+            <Code language='html'>
+              {`<Button icon='cloud_download' type='warning' onPress={this.onClick.bind(this)} title='Sample text' />`}
+            </Code>
+            <ViewSpacer />
+
+            <Text>{_('Info')}</Text>
+            <Button
+              isLoading
+              type='info'
+              onPress={this.onClick.bind(this)}
+              title={_('Sample text')}
+            />
+            <Code language='html'>
+              {`<Button isLoading type='info' onPress={this.onClick.bind(this)} title='Sample text' />`}
+            </Code>
+            <ViewSpacer />
+
+            <Text>{_('Success')}</Text>
+            <Button
+              isLoading
+              type='success'
+              onPress={this.onClick.bind(this)}
+              title={_('Sample text')}
+            />
+            <Code language='html'>
+              {`<Button isLoading type='success' onPress={this.onClick.bind(this)} title='Sample text' />`}
+            </Code>
+
+            <ViewSpacer />
+
+            <Text>{_('Small')}</Text>
+            <Button
+              isLoading
+              size='small'
+              onPress={this.onClick.bind(this)}
+              title={_('Sample text')}
+            />
+            <Code language='html'>
+              {`<Button isLoading size='small' onPress={this.onClick.bind(this)} title='Sample text' />`}
+            </Code>
+            <ViewSpacer />
+
+            <Text>{_('Medium')}</Text>
+            <Button
+              icon='home'
+              size='medium'
+              onPress={this.onClick.bind(this)}
+              title={_('Sample text')}
+            />
+            <Code language='html'>
+              {`<Button icon='home' size='medium' onPress={this.onClick.bind(this)} title='Sample text' />`}
+            </Code>
+            <ViewSpacer />
+
+            <Text>{_('Large')}</Text>
+            <Button
+              icon='refresh'
+              size='large'
+              onPress={this.onClick.bind(this)}
+              title={_('Sample text')}
+            />
+            <Code language='html'>
+              {`<Button icon='refresh' size='large' onPress={this.onClick.bind(this)} title='Sample text' />`}
+            </Code>
+
+            <ViewSpacer />
+
+            <Text>{_('Icon After')}</Text>
+            <Button
+              icon='favorite'
+              iconPosition='after'
+              type='primary'
+              onPress={this.onClick.bind(this)}
+              title={_('Sample text')}
+            />
+            <Code language='html'>
+              {`<Button icon='favorite' iconPosition='after' type='primary' onPress={this.onClick.bind(this)} title='Sample text' />`}
             </Code>
 
           </SamplesContainer>
