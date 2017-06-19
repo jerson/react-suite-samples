@@ -27,8 +27,7 @@ export default class MainScene extends React.Component<Props, State> {
         <Container>
           <Image
             source={{
-              uri:
-                'https://github.com/jerson/react-suite/raw/master/docs/logo.png'
+              uri: 'https://image.ibb.co/k8c9Nk/logo.png'
             }}
             resizeMode={'contain'}
             style={{ width: 150, height: 100, alignSelf: 'center' }}
