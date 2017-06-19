@@ -5,14 +5,6 @@
 samples for https://github.com/jerson/react-suite
 
 ![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/web01.png)
-![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/web02.png)
-![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/web03.png)
-![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/android01.png)
-![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/android02.png)
-![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/ios01.png)
-![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/ios02.png)
-![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/ios03.png)
-![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/ios04.png)
 
 
 ## install
@@ -53,3 +45,16 @@ same as a normal react native project
 
 - [react-suite](https://github.com/jerson/react-suite)
 - [react-suite-boilerplate](https://github.com/jerson/react-suite-boilerplate)
+
+
+## more screenshots
+
+
+![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/web02.png)
+![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/web03.png)
+![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/android01.png)
+![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/android02.png)
+![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/ios01.png)
+![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/ios02.png)
+![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/ios03.png)
+![default view](https://github.com/jerson/react-suite-samples/raw/master/docs/ios04.png)
