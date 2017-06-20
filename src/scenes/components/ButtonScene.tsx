@@ -206,10 +206,12 @@ export default class ButtonScene extends React.Component<Props, State> {
   title?: string;
   isLoading?: boolean;
   icon?: string;
-  iconSize?: number;
   style?: ViewStyle;
   iconStyle?: TextStyle;
   textStyle?: TextStyle;
+  iconPosition?: 'before' | 'after';
+  type?: 'default' | 'primary' | 'danger' | 'warning' | 'info' | 'success';
+  size?: 'default' | 'small' | 'medium' | 'large';
   onPress: () => void;
 }`}
             </Code>

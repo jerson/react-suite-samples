@@ -49,11 +49,24 @@ export default class IconScene extends React.Component<Props, State> {
 
           <SamplesContainer>
             <Title size='normal'>{_('Examples')}</Title>
+
             <ViewSpacer />
             <Text>{_('Basic')}</Text>
             <Icon name='home' />
             <Code language='html'>
               {`<Icon name='home' />`}
+            </Code>
+            <ViewSpacer />
+            <Text>{_('Size')}</Text>
+            <Icon name='settings' size={50} />
+            <Code language='html'>
+              {`<Icon name='settings' size={50}/>`}
+            </Code>
+            <ViewSpacer />
+            <Text>{_('Style')}</Text>
+            <Icon name='settings' style={{ color: 'blue' }} size={30} />
+            <Code language='html'>
+              {`<Icon name='settings' style={{color: 'blue'}} size={30}/>`}
             </Code>
 
           </SamplesContainer>
@@ -63,13 +76,13 @@ export default class IconScene extends React.Component<Props, State> {
           <PropertiesContainer>
             <Title size='normal'>{_('Properties')}</Title>
             <Code>
-              {`type IconType = 'material' | 'fontAwesome' | 'zocial' | 'ionicons' | 'foundation' | 'octicons' | 'entypo' | 'evilIcons';
+              {`type IconType = 'material';
 
 interface IconProps {
-    type?: IconType;
-    style?: ViewStyle;
-    size?: number;
-    name: string;
+  type?: IconType;
+  style?: TextStyle;
+  size?: number;
+  name: string;
 }`}
             </Code>
           </PropertiesContainer>

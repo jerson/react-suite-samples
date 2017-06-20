@@ -48,7 +48,7 @@ export default class InputScene extends React.Component<Props, State> {
             <Text>{_('Basic')}</Text>
 
             <View style={{ maxWidth: 300 }}>
-              <Input placeholder='Username' />
+              <Input placeholder={_('Username')} />
             </View>
 
             <Code language='html'>
@@ -58,24 +58,42 @@ export default class InputScene extends React.Component<Props, State> {
             <Text>{_('With Label')}</Text>
 
             <View style={{ maxWidth: 300 }}>
-              <Input useLabel placeholder='Email' />
+              <Input useLabel placeholder={_('Email')} />
             </View>
 
             <Code language='html'>
               {`<Input useLabel placeholder='Email' />`}
             </Code>
             <ViewSpacer />
-            <ViewSpacer />
             <Text>{_('Password Input')}</Text>
 
             <View style={{ maxWidth: 300 }}>
-              <Input secureTextEntry useLabel placeholder='Password' />
+              <Input
+                defaultValue='123456'
+                secureTextEntry
+                useLabel
+                placeholder={_('Password')}
+              />
             </View>
 
             <Code language='html'>
-              {`<Input secureTextEntry useLabel placeholder='Password' />`}
+              {`<Input defaultValue='123456' secureTextEntry useLabel placeholder='Password' />`}
             </Code>
             <ViewSpacer />
+            <Text>{_('Error Input')}</Text>
+
+            <View style={{ maxWidth: 300 }}>
+              <Input
+                hasError
+                defaultValue={_('Error value')}
+                useLabel
+                placeholder={_('Name')}
+              />
+            </View>
+
+            <Code language='html'>
+              {`<Input hasError defaultValue='error value' useLabel placeholder='Name' />`}
+            </Code>
 
           </SamplesContainer>
 
@@ -84,10 +102,11 @@ export default class InputScene extends React.Component<Props, State> {
           <PropertiesContainer>
             <Title size='normal'>{_('Properties')}</Title>
             <Code>
-              {`interface InputProps extends TextInputProperties \{
+              {`interface InputProps extends TextInputProperties {
     value?: string;
     placeholder?: string;
     defaultValue?: string;
+    hasError?: boolean;
     style?: ViewStyle;
     containerStyle?: ViewStyle;
     onChangeText?: (text: string) => void;

@@ -54,6 +54,50 @@ export default class LinkScene extends React.Component<Props, State> {
             <Code language='html'>
               {`<Link onPress={this.onClick.bind(this)} title='Touchable Link' />`}
             </Code>
+            <ViewSpacer />
+            <Text>{_('Icon')}</Text>
+            <Link
+              icon='refresh'
+              onPress={this.onClick.bind(this)}
+              title='Touchable Link'
+            />
+
+            <Code language='html'>
+              {`<Link icon='refresh' onPress={this.onClick.bind(this)} title='Touchable Link' />`}
+            </Code>
+            <ViewSpacer />
+            <Text>{_('Small')}</Text>
+            <Link
+              size='small'
+              onPress={this.onClick.bind(this)}
+              title='Touchable Link'
+            />
+
+            <Code language='html'>
+              {`<Link size='small' onPress={this.onClick.bind(this)} title='Touchable Link' />`}
+            </Code>
+            <ViewSpacer />
+            <Text>{_('Medium')}</Text>
+            <Link
+              size='medium'
+              onPress={this.onClick.bind(this)}
+              title='Touchable Link'
+            />
+
+            <Code language='html'>
+              {`<Link size='medium' onPress={this.onClick.bind(this)} title='Touchable Link' />`}
+            </Code>
+            <ViewSpacer />
+            <Text>{_('Large')}</Text>
+            <Link
+              size='large'
+              onPress={this.onClick.bind(this)}
+              title='Touchable Link'
+            />
+
+            <Code language='html'>
+              {`<Link size='large' onPress={this.onClick.bind(this)} title='Touchable Link' />`}
+            </Code>
 
           </SamplesContainer>
 
@@ -66,10 +110,11 @@ export default class LinkScene extends React.Component<Props, State> {
     title?: string;
     isLoading?: boolean;
     icon?: string;
-    iconSize?: number;
     style?: ViewStyle;
     iconStyle?: TextStyle;
     textStyle?: TextStyle;
+    iconPosition?: 'before' | 'after';
+    size?: 'default' | 'small' | 'medium' | 'large';
     onPress?: () => void;
 }`}
             </Code>
