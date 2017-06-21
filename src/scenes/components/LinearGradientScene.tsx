@@ -50,7 +50,7 @@ export default class LinearGradientScene extends React.Component<Props, State> {
             <ViewSpacer />
             <Text>{_('Button')}</Text>
             <LinearGradient
-              colors={['#4c669f', '#3b5998', '#192f6a']}
+              colors={['#52E5E7', '#130CB7']}
               style={styles.linearGradient}
             >
               <Text style={styles.buttonText}>
@@ -58,7 +58,7 @@ export default class LinearGradientScene extends React.Component<Props, State> {
               </Text>
             </LinearGradient>
             <Code language='html'>
-              {`<LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']}
+              {`<LinearGradient colors={['#52E5E7', '#130CB7']}
                             style={styles.linearGradient}>
     <Text>
       Sample button
@@ -69,21 +69,21 @@ export default class LinearGradientScene extends React.Component<Props, State> {
             <ViewSpacer />
             <Text>{_('Background')}</Text>
             <LinearGradient
-              colors={['red', 'blue', '#192f6a']}
+              colors={['#FEC163', '#DE4313']}
               style={{ flex: 1, height: 100 }}
             />
             <Code language='html'>
-              {`<LinearGradient colors={['red', 'blue', '#192f6a']} style={{flex: 1, height: 100}} />`}
+              {`<LinearGradient colors={['#FEC163', '#DE4313']} style={{flex: 1, height: 100}} />`}
             </Code>
 
             <ViewSpacer />
 
             <LinearGradient
-              colors={['#3084cf', '#37449c']}
-              style={{ flex: 1, height: 100 }}
+                colors={['#FFF3B0', '#CA26FF']}
+                style={{ flex: 1, height: 100 }}
             />
             <Code language='html'>
-              {`<LinearGradient colors={['#3084cf', '#37449c']} style={{flex: 1, height: 100}} />`}
+                {`<LinearGradient colors={['#FFF3B0', '#CA26FF']} style={{flex: 1, height: 100}} />`}
             </Code>
 
           </SamplesContainer>

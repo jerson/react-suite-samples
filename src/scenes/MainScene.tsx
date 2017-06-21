@@ -34,7 +34,10 @@ export default class MainScene extends React.Component<Props, State> {
           />
           <Text>
             {_(
-              'react-suite, is a collection of components and modules build on top react-native and react-native-web made with typescript for build apps for Android, IOS and Web with the same code, this example proyect was made with react-suite.'
+              'react-suite, is a collection of components and modules ' +
+                'build on top react-native and react-native-web made with ' +
+                'typescript for build apps for Android, IOS and Web with ' +
+                'the same code, this example proyect was made with react-suite.'
             )}
           </Text>
           <ViewSpacer spacing={20} />
