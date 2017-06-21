@@ -46,61 +46,105 @@ export default class AlertMessageScene extends React.Component<Props, State> {
             <Text>{_('Basic')}</Text>
             <AlertMessage message={_('Sample message alert')} />
             <Code language='html'>
-                {`<AlertMessage message='Sample message alert' />`}
+              {`<AlertMessage message='Sample message alert' />`}
             </Code>
             <ViewSpacer />
             <Text>{_('With title')}</Text>
-            <AlertMessage title={_('Sample title')} message={_('Sample message alert')} />
+            <AlertMessage
+              title={_('Sample title')}
+              message={_('Sample message alert')}
+            />
             <Code language='html'>
-                {`<AlertMessage title={'Sample title'} message='Sample message alert' />`}
+              {`<AlertMessage title={'Sample title'} message='Sample message alert' />`}
             </Code>
             <ViewSpacer />
             <Text>{_('With icon')}</Text>
-            <AlertMessage icon={'pets'} title={_('Sample title')} message={_('Sample message alert')} />
+            <AlertMessage
+              icon={'pets'}
+              title={_('Sample title')}
+              message={_('Sample message alert')}
+            />
             <Code language='html'>
-                {`<AlertMessage icon={'pets'} title={'Sample title'} message='Sample message alert' />`}
+              {`<AlertMessage icon={'pets'} title={'Sample title'} message='Sample message alert' />`}
             </Code>
             <ViewSpacer />
             <Text>{_('Primary')}</Text>
-            <AlertMessage type='primary' icon={'settings_input_hdmi'} title={_('Sample title')} message={_('Sample message alert')} />
+            <AlertMessage
+              type='primary'
+              icon={'settings_input_hdmi'}
+              title={_('Sample title')}
+              message={_('Sample message alert')}
+            />
             <Code language='html'>
-                {`<AlertMessage type='primary' icon={'settings_input_hdmi'} title={'Sample title'} message='Sample message alert' />`}
+              {`<AlertMessage type='primary' icon={'settings_input_hdmi'} title={'Sample title'} message='Sample message alert' />`}
             </Code>
             <ViewSpacer />
             <Text>{_('Danger')}</Text>
-            <AlertMessage type='danger' icon={'lock'} title={_('Sample title')} message={_('Sample message alert')} />
+            <AlertMessage
+              type='danger'
+              icon={'lock'}
+              title={_('Sample title')}
+              message={_('Sample message alert')}
+            />
             <Code language='html'>
-                {`<AlertMessage type='danger' icon={'lock'} title={'Sample title'} message='Sample message alert' />`}
+              {`<AlertMessage type='danger' icon={'lock'} title={'Sample title'} message='Sample message alert' />`}
             </Code>
             <ViewSpacer />
             <Text>{_('Warning')}</Text>
-            <AlertMessage type='warning' icon={'motorcycle'} title={_('Sample title')} message={_('Sample message alert')} />
+            <AlertMessage
+              type='warning'
+              icon={'motorcycle'}
+              title={_('Sample title')}
+              message={_('Sample message alert')}
+            />
             <Code language='html'>
-                {`<AlertMessage type='warning' icon={'motorcycle'} title={'Sample title'} message='Sample message alert' />`}
+              {`<AlertMessage type='warning' icon={'motorcycle'} title={'Sample title'} message='Sample message alert' />`}
             </Code>
             <ViewSpacer />
             <Text>{_('Info')}</Text>
-            <AlertMessage type='info' icon={'pan_tool'} title={_('Sample title')} message={_('Sample message alert')} />
+            <AlertMessage
+              type='info'
+              icon={'pan_tool'}
+              title={_('Sample title')}
+              message={_('Sample message alert')}
+            />
             <Code language='html'>
-                {`<AlertMessage type='info' icon={'pan_tool'} title={'Sample title'} message='Sample message alert' />`}
+              {`<AlertMessage type='info' icon={'pan_tool'} title={'Sample title'} message='Sample message alert' />`}
             </Code>
             <ViewSpacer />
             <Text>{_('Success')}</Text>
-            <AlertMessage type='success' icon={'pageview'} title={_('Sample title')} message={_('Sample message alert')} />
+            <AlertMessage
+              type='success'
+              icon={'pageview'}
+              title={_('Sample title')}
+              message={_('Sample message alert')}
+            />
             <Code language='html'>
-                {`<AlertMessage type='success' icon={'pageview'} title={'Sample title'} message='Sample message alert' />`}
+              {`<AlertMessage type='success' icon={'pageview'} title={'Sample title'} message='Sample message alert' />`}
             </Code>
             <ViewSpacer />
             <Text>{_('Allow Close')}</Text>
-            <AlertMessage allowClose type='primary' icon={'pageview'} title={_('Sample title')} message={_('Sample message alert')} />
+            <AlertMessage
+              allowClose
+              type='primary'
+              icon={'pageview'}
+              title={_('Sample title')}
+              message={_('Sample message alert')}
+            />
             <Code language='html'>
-                {`<AlertMessage allowClose type='primary' icon={'pageview'} title={'Sample title'} message='Sample message alert' />`}
+              {`<AlertMessage allowClose type='primary' icon={'pageview'} title={'Sample title'} message='Sample message alert' />`}
             </Code>
             <ViewSpacer />
             <Text>{_('Loading')}</Text>
-            <AlertMessage isLoading type='primary' icon={'pageview'} title={_('Sample title')} message={_('Sample message alert')} />
+            <AlertMessage
+              isLoading
+              type='primary'
+              icon={'pageview'}
+              title={_('Sample title')}
+              message={_('Sample message alert')}
+            />
             <Code language='html'>
-                {`<AlertMessage isLoading type='primary' icon={'pageview'} title={'Sample title'} message='Sample message alert' />`}
+              {`<AlertMessage isLoading type='primary' icon={'pageview'} title={'Sample title'} message='Sample message alert' />`}
             </Code>
 
           </SamplesContainer>

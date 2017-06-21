@@ -79,11 +79,11 @@ export default class LinearGradientScene extends React.Component<Props, State> {
             <ViewSpacer />
 
             <LinearGradient
-                colors={['#FFF3B0', '#CA26FF']}
-                style={{ flex: 1, height: 100 }}
+              colors={['#FFF3B0', '#CA26FF']}
+              style={{ flex: 1, height: 100 }}
             />
             <Code language='html'>
-                {`<LinearGradient colors={['#FFF3B0', '#CA26FF']} style={{flex: 1, height: 100}} />`}
+              {`<LinearGradient colors={['#FFF3B0', '#CA26FF']} style={{flex: 1, height: 100}} />`}
             </Code>
 
           </SamplesContainer>
