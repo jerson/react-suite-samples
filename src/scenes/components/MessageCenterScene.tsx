@@ -49,7 +49,11 @@ export default class MessageCenterScene extends React.Component<Props, State> {
 
   show(options?: Message) {
     this.refs.center.show({
-      title: _('Example text for message')
+      title: _('Example title'),
+      message: _('Example text for message'),
+      icon: 'motorcycle',
+      autoDismiss: 2,
+      type: 'success'
     });
   }
 
@@ -93,7 +97,12 @@ componentWillUnmount(){
 
 show(){
   this.refs.center.show({
-        title: 'Example text for message'
+            title: 'Example title',
+            message: 'Example text for message',
+            icon: 'motorcycle',
+            type: 'primary',
+            autoDismiss: 2,
+
   });
 }
 
@@ -119,12 +128,15 @@ render(){
     topOffset?: number;
 }
 
-interface Message {
-  id?: string;
-  title?: string;
-  message?: string;
-  isLoading?: boolean;
-  autoDismiss?: number;
+interface Message extends AlertMessageProps {
+    id?: string;
+    title?: string;
+    icon?: string;
+    message?: string;
+    isLoading?: boolean;
+    autoDismiss?: number;
+    type?: 'default' | 'primary' | 'danger' | 'warning' | 'info' | 'success';
+
 }`}
             </Code>
           </PropertiesContainer>
