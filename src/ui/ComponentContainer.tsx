@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, ViewStyle } from 'react-native';
 import View from 'react-suite/build/components/ui/View';
+import Theme from 'react-suite/build/modules/theme/Theme';
 
 interface Props extends ViewStyle {
   style?: ViewStyle;
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     paddingTop: 8,
-    backgroundColor: '#fff',
+    backgroundColor: Theme.vars.defaults.backgroundColor,
     borderRadius: 4,
     shadowRadius: 7,
     marginTop: 10,
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     //maxWidth: 400,
     elevation: 2,
     zIndex: 2,
-    shadowColor: '#9a9a9e',
+    shadowColor: Theme.vars.defaults.shadowColor,
     shadowOpacity: 0.3,
     shadowOffset: {
       width: 0,

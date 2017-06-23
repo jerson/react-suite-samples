@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, ViewStyle } from 'react-native';
 import View from 'react-suite/build/components/ui/View';
+import Theme from 'react-suite/build/modules/theme/Theme';
 
 interface Props extends ViewStyle {
   style?: ViewStyle;
@@ -18,6 +19,6 @@ export default class SceneContainer extends React.Component<Props, State> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgb(248, 248, 255)'
+    backgroundColor: Theme.vars.defaults.backgroundSecondaryColor
   } as ViewStyle
 });

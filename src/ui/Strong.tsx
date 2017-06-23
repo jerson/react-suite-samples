@@ -16,6 +16,5 @@ export default class Strong extends React.Component<Props, State> {
 const styles = StyleSheet.create({
   container: {
     fontWeight: 'bold'
-    //textAlign: 'center'
   } as TextStyle
 });

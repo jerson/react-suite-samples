@@ -218,7 +218,6 @@ export default class DrawerContent extends React.Component<Props, State> {
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
     paddingTop: 10
   } as ViewStyle,
   gradient: {
@@ -228,8 +227,7 @@ const styles = StyleSheet.create({
     bottom: 0
   } as ViewStyle,
   container: {
-    flex: 1,
-    backgroundColor: '#fff'
+    flex: 1
   } as ViewStyle,
   content: {
     flex: 1

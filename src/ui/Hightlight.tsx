@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import Text from 'react-suite/build/components/ui/Text';
 import View from 'react-suite/build/components/ui/View';
+import Theme from 'react-suite/build/modules/theme/Theme';
 
 interface Props {}
 
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     flexWrap: 'wrap',
     alignSelf: 'flex-start',
-    backgroundColor: '#7395fc',
+    backgroundColor: Theme.vars.defaults.primaryColor,
     borderRadius: 4,
     padding: 5,
     paddingTop: 2,
@@ -33,6 +34,6 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#fff'
+    color: Theme.vars.defaults.textActiveColor
   } as TextStyle
 });

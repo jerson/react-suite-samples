@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, TextStyle } from 'react-native';
 import Text from 'react-suite/build/components/ui/Text';
+import Theme from 'react-suite/build/modules/theme/Theme';
 
 interface Props {}
 
@@ -23,7 +24,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '200',
     textAlign: 'center',
-    margin: 10,
-    color: '#444'
+    margin: 10
   } as TextStyle
 });
