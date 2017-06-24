@@ -66,6 +66,79 @@ export default class PanelScene extends React.Component<Props, State> {
 `}
             </Code>
 
+            <ViewSpacer />
+            <Text>{_('Actions')}</Text>
+
+            <Panel
+              actions={[
+                {
+                  title: _('Action 1'),
+                  type: 'primary',
+                  onPress: () => {
+                    //
+                  }
+                },
+                {
+                  icon: 'refresh',
+                  title: _('Action 2'),
+                  type: 'primary',
+                  onPress: () => {
+                    //
+                  }
+                },
+                {
+                  icon: 'home',
+                  type: 'primary',
+                  onPress: () => {
+                    //
+                  }
+                }
+              ]}
+              title={_('Title Panel')}
+            >
+              <Text>Lorem</Text>
+              <Text>Lorem</Text>
+              <Text>Lorem</Text>
+              <Text>Lorem</Text>
+              <Text>Lorem</Text>
+              <Text>Lorem</Text>
+            </Panel>
+
+            <Code language='html'>
+              {`<Panel actions={[
+                            {
+                                title: 'Action 1',
+                                type: 'primary',
+                                onPress: () => {
+                                    //
+                                },
+                            },
+                            {
+                                icon: 'refresh',
+                                title: 'Action 2',
+                                type: 'primary',
+                                onPress: () => {
+                                    //
+                                },
+                            },
+                            {
+                                icon: 'home',
+                                type: 'primary',
+                                onPress: () => {
+                                    //
+                                },
+                            },
+                        ]} title={'Title Panel'}>
+            <Text>Lorem</Text>
+            <Text>Lorem</Text>
+            <Text>Lorem</Text>
+            <Text>Lorem</Text>
+            <Text>Lorem</Text>
+            <Text>Lorem</Text>
+</Panel>
+`}
+            </Code>
+
           </SamplesContainer>
 
           <ViewSpacer />

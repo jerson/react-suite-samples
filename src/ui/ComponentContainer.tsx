@@ -22,12 +22,10 @@ const styles = StyleSheet.create({
     paddingTop: 8,
     backgroundColor: Theme.vars.defaults.backgroundColor,
     borderRadius: 4,
-    shadowRadius: 7,
     marginTop: 10,
-    //alignSelf: 'center',
-    //maxWidth: 400,
     elevation: 2,
     zIndex: 2,
+    shadowRadius: 7,
     shadowColor: Theme.vars.defaults.shadowColor,
     shadowOpacity: 0.3,
     shadowOffset: {

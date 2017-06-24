@@ -2,8 +2,6 @@ import * as React from 'react';
 import { StyleSheet, ViewStyle } from 'react-native';
 import { MessageCenter, ModalCenter, View } from 'react-suite';
 import Screen from 'react-suite/build/modules/listener/Screen';
-import Theme from 'react-suite/build/modules/theme/Theme';
-import Darker from './themes/Darker';
 
 const PropTypes = require('prop-types');
 
