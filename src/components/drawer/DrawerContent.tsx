@@ -39,6 +39,11 @@ export default class DrawerContent extends React.Component<Props, State> {
       },
       {
         icon: 'menu',
+        name: _('Drawer'),
+        onPress: this.goTo.bind(this, '/drawer')
+      },
+      {
+        icon: 'more_vert',
         name: _('Header'),
         onPress: this.goTo.bind(this, '/header')
       },

@@ -36,6 +36,7 @@ import ProgressBarScene from './scenes/components/ProgressBarScene';
 import SliderScene from './scenes/components/SliderScene';
 import MainScene from './scenes/MainScene';
 import HeaderScene from './scenes/components/HeaderScene';
+import DrawerScene from './scenes/components/DrawerScene';
 
 interface Props {}
 
@@ -54,6 +55,7 @@ export default class App extends React.Component<Props, State> {
                 component={LinearGradientScene}
               />
               <Router.Route path='/header' component={HeaderScene} />
+              <Router.Route path='/drawer' component={DrawerScene} />
               <Router.Route path='/image' component={ImageScene} />
               <Router.Route path='/blur-image' component={BlurImageScene} />
               <Router.Route path='/loading' component={LoadingScene} />

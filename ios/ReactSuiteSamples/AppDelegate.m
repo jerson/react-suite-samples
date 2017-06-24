@@ -8,6 +8,7 @@
  */
 
 #import "AppDelegate.h"
+#import "Orientation.h"
 #import <CodePush/CodePush.h>
 
 #import <React/RCTBundleURLProvider.h>
@@ -41,4 +42,7 @@
   return YES;
 }
 
+  - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    return [Orientation getOrientation];
+  }
 @end

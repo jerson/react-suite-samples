@@ -72,13 +72,6 @@ export default class PanelScene extends React.Component<Props, State> {
             <Panel
               actions={[
                 {
-                  title: _('Action 1'),
-                  type: 'primary',
-                  onPress: () => {
-                    //
-                  }
-                },
-                {
                   icon: 'refresh',
                   title: _('Action 2'),
                   type: 'primary',
@@ -106,13 +99,6 @@ export default class PanelScene extends React.Component<Props, State> {
 
             <Code language='html'>
               {`<Panel actions={[
-                            {
-                                title: 'Action 1',
-                                type: 'primary',
-                                onPress: () => {
-                                    //
-                                },
-                            },
                             {
                                 icon: 'refresh',
                                 title: 'Action 2',

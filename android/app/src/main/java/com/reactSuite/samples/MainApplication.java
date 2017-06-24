@@ -45,6 +45,7 @@ public class MainApplication extends Application implements ReactApplication {
             new RNSharedPreferencesReactPackage(),
             new OrientationPackage(),
             new RNDeviceInfo()
+
       );
     }
   };
