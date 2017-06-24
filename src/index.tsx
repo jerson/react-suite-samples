@@ -11,6 +11,7 @@ import LinearGradientScene from './scenes/components/LinearGradientScene';
 import ImageScene from './scenes/components/ImageScene';
 import BlurImageScene from './scenes/components/BlurImageScene';
 import LoadingScene from './scenes/components/LoadingScene';
+import LabelScene from './scenes/components/LabelScene';
 import ScrollViewScene from './scenes/components/ScrollViewScene';
 import ButtonScene from './scenes/components/ButtonScene';
 import LinkScene from './scenes/components/LinkScene';
@@ -54,6 +55,7 @@ export default class App extends React.Component<Props, State> {
                 path='/linear-gradient'
                 component={LinearGradientScene}
               />
+              <Router.Route path='/label' component={LabelScene} />
               <Router.Route path='/header' component={HeaderScene} />
               <Router.Route path='/drawer' component={DrawerScene} />
               <Router.Route path='/image' component={ImageScene} />

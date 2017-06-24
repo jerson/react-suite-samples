@@ -1,6 +1,14 @@
+import LabelScene from '../../scenes/components/LabelScene';
+
 import * as React from 'react';
 import { ScrollViewStyle, StyleSheet, ViewStyle } from 'react-native';
 import { _, ScrollView } from 'react-suite';
+import DrawerFooter from 'react-suite/build/components/ui/DrawerFooter';
+import DrawerHeader from 'react-suite/build/components/ui/DrawerHeader';
+import { DrawerItemProps } from 'react-suite/build/components/ui/DrawerItem';
+import Image from 'react-suite/build/components/ui/Image';
+import LinearGradient from 'react-suite/build/components/ui/LinearGradient';
+import StatusBarView from 'react-suite/build/components/ui/StatusBarView';
 import View from 'react-suite/build/components/ui/View';
 import DrawerHeader from 'react-suite/build/components/ui/DrawerHeader';
 import DrawerFooter from 'react-suite/build/components/ui/DrawerFooter';
@@ -8,6 +16,7 @@ import DrawerItem, { DrawerItemProps } from 'react-suite/build/components/ui/Dra
 import LinearGradient from 'react-suite/build/components/ui/LinearGradient';
 import Image from 'react-suite/build/components/ui/Image';
 import StatusBarView from 'react-suite/build/components/ui/StatusBarView';
+import Label from 'react-suite/build/components/ui/Label';
 
 const PropTypes = require('prop-types');
 
@@ -33,6 +42,21 @@ export default class DrawerContent extends React.Component<Props, State> {
         name: _('Components')
       },
       {
+        icon: 'crop_7_5',
+        name: _('Button'),
+        onPress: this.goTo.bind(this, '/button')
+      },
+      {
+        icon: 'label',
+        name: _('Label'),
+        onPress: this.goTo.bind(this, '/label')
+      },
+      {
+        icon: 'link',
+        name: _('Link'),
+        onPress: this.goTo.bind(this, '/link')
+      },
+      {
         icon: 'gradient',
         name: _('LinearGradient'),
         onPress: this.goTo.bind(this, '/linear-gradient')
@@ -40,7 +64,8 @@ export default class DrawerContent extends React.Component<Props, State> {
       {
         icon: 'menu',
         name: _('Drawer'),
-        onPress: this.goTo.bind(this, '/drawer')
+        onPress: this.goTo.bind(this, '/drawer'),
+        rightView: <Label hideIcon type='warning' title={_('Partial')} />
       },
       {
         icon: 'more_vert',
@@ -51,21 +76,6 @@ export default class DrawerContent extends React.Component<Props, State> {
         icon: 'blur_on',
         name: _('BlurImage'),
         onPress: this.goTo.bind(this, '/blur-image')
-      },
-      {
-        icon: 'refresh',
-        name: _('Loading'),
-        onPress: this.goTo.bind(this, '/loading')
-      },
-      {
-        icon: 'crop_7_5',
-        name: _('Button'),
-        onPress: this.goTo.bind(this, '/button')
-      },
-      {
-        icon: 'link',
-        name: _('Link'),
-        onPress: this.goTo.bind(this, '/link')
       },
       {
         icon: 'font_download',
@@ -88,19 +98,16 @@ export default class DrawerContent extends React.Component<Props, State> {
         onPress: this.goTo.bind(this, '/panel')
       },
       {
-        icon: 'space_bar',
-        name: _('View Spacer'),
-        onPress: this.goTo.bind(this, '/view-spacer')
-      },
-      {
         icon: 'view_module',
         name: _('FlexibleGrid'),
-        onPress: this.goTo.bind(this, '/flexible-grid')
+        onPress: this.goTo.bind(this, '/flexible-grid'),
+        rightView: <Label hideIcon type='warning' title={_('Partial')} />
       },
       {
         icon: 'view_carousel',
         name: _('ModalCenter'),
-        onPress: this.goTo.bind(this, '/modal-center')
+        onPress: this.goTo.bind(this, '/modal-center'),
+        rightView: <Label hideIcon type='warning' title={_('Partial')} />
       },
       {
         icon: 'forum',
@@ -110,12 +117,14 @@ export default class DrawerContent extends React.Component<Props, State> {
       {
         icon: 'remove',
         name: _('ProgressBar'),
-        onPress: this.goTo.bind(this, '/progress-bar')
+        onPress: this.goTo.bind(this, '/progress-bar'),
+        rightView: <Label hideIcon type='danger' title={_('Incomplete')} />
       },
       {
         icon: 'trending_flat',
         name: _('Slider'),
-        onPress: this.goTo.bind(this, '/slider')
+        onPress: this.goTo.bind(this, '/slider'),
+        rightView: <Label hideIcon type='danger' title={_('Incomplete')} />
       },
       {
         isHeader: true,
@@ -124,7 +133,8 @@ export default class DrawerContent extends React.Component<Props, State> {
       {
         icon: 'account_box',
         name: _('Session'),
-        onPress: this.goTo.bind(this, '/session')
+        onPress: this.goTo.bind(this, '/session'),
+        rightView: <Label hideIcon type='warning' title={_('Partial')} />
       },
       {
         icon: 'translate',
@@ -139,7 +149,8 @@ export default class DrawerContent extends React.Component<Props, State> {
       {
         icon: 'location_on',
         name: _('Geolocation'),
-        onPress: this.goTo.bind(this, '/geolocation')
+        onPress: this.goTo.bind(this, '/geolocation'),
+        rightView: <Label hideIcon type='warning' title={_('Partial')} />
       },
       {
         icon: 'web',
@@ -169,6 +180,16 @@ export default class DrawerContent extends React.Component<Props, State> {
       {
         isHeader: true,
         name: _('Basic')
+      },
+      {
+        icon: 'space_bar',
+        name: _('View Spacer'),
+        onPress: this.goTo.bind(this, '/view-spacer')
+      },
+      {
+        icon: 'refresh',
+        name: _('Loading'),
+        onPress: this.goTo.bind(this, '/loading')
       },
       {
         icon: 'view_agenda',

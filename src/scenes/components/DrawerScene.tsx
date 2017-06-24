@@ -53,19 +53,12 @@ export default class DrawerScene extends React.Component<Props, State> {
 
             <ViewSpacer />
             <Text>{_('Basic')}</Text>
-            <View
-              style={{
-                maxWidth: 800,
-                overflow: 'hidden',
-                flex: 1,
-                height: 300
-              }}
-            >
+            <View style={{ width: 800, height: 300 }}>
               <Drawer ref={'drawer1'} content={<Text>drawer here</Text>}>
-                <View style={{ flex: 1 }}>
+                <View>
                   <Text>body here</Text>
                   <Button
-                    title={_('Toggle drawer')}
+                    title={'Toggle drawer'}
                     onPress={() => {
                       this.refs.drawer1.toggle();
                     }}
@@ -89,24 +82,17 @@ export default class DrawerScene extends React.Component<Props, State> {
 
             <ViewSpacer />
             <Text>{_('Max Width')}</Text>
-            <View
-              style={{
-                maxWidth: 800,
-                overflow: 'hidden',
-                flex: 1,
-                height: 300
-              }}
-            >
+            <View style={{ width: 800, flex: 1, height: 300 }}>
               <Drawer
                 useTabledMode
                 tabledModeMinWidth={300}
                 ref={'drawer2'}
                 content={<Text>drawer here</Text>}
               >
-                <View style={{ flex: 1 }}>
+                <View>
                   <Text>body here</Text>
                   <Button
-                    title={_('Toggle drawer')}
+                    title={'Toggle drawer'}
                     onPress={() => {
                       this.refs.drawer2.toggle();
                     }}
