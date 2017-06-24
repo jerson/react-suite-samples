@@ -17,6 +17,9 @@ import View from 'react-suite/build/components/ui/View';
 import Drawer from 'react-suite/build/components/ui/Drawer';
 import Button from 'react-suite/build/components/ui/Button';
 import Strong from '../../ui/Strong';
+import DrawerHeader from 'react-suite/build/components/ui/DrawerHeader';
+import DrawerFooter from 'react-suite/build/components/ui/DrawerFooter';
+import DrawerItem from 'react-suite/build/components/ui/DrawerItem';
 
 export interface Props {}
 
@@ -39,7 +42,13 @@ export default class DrawerScene extends React.Component<Props, State> {
 
           <ComponentContainer>
             <Title size='normal'>{_('Dependencies')}</Title>
-            <Hightlight>{_('All')}</Hightlight>
+            <Hightlight>{_('Android')}</Hightlight>
+            <Text>
+              {_('Using {component} from react-native', {
+                component: 'DrawerLayoutAndroid'
+              })}
+            </Text>
+            <Hightlight>{_('Others')}</Hightlight>
             <Text>
               <Strong>yarn add react-native-drawer</Strong>
             </Text>
@@ -53,28 +62,62 @@ export default class DrawerScene extends React.Component<Props, State> {
 
             <ViewSpacer />
             <Text>{_('Basic')}</Text>
-            <View style={{ width: 800, height: 300 }}>
-              <Drawer ref={'drawer1'} content={<Text>drawer here</Text>}>
-                <View>
-                  <Text>body here</Text>
-                  <Button
-                    title={'Toggle drawer'}
-                    onPress={() => {
-                      this.refs.drawer1.toggle();
-                    }}
-                  />
-                </View>
-              </Drawer>
+            <View style={{ height: 300, width: 300, position: 'relative' }}>
+              <View
+                style={{
+                  position: 'absolute',
+                  left: 0,
+                  top: 0,
+                  bottom: 0,
+                  right: 0
+                }}
+              >
+                <Drawer
+                  ref={'drawer1'}
+                  content={
+                    <View>
+                      <DrawerHeader title={'my app'} />
+                      <DrawerItem icon='home' name='Home' />
+                      <DrawerItem isHeader name='Profile' />
+                      <DrawerItem icon='security' name='Edit' />
+                      <DrawerFooter text={'my copyleft'} />
+                    </View>
+                  }
+                >
+                  <View>
+                    <Text>body here</Text>
+                    <Button
+                      type='primary'
+                      title={'Toggle drawer'}
+                      onPress={() => {
+                        this.refs.drawer1.toggle();
+                      }}
+                    />
+                  </View>
+                </Drawer>
+              </View>
             </View>
 
             <Code>
-              {`<View style={{maxWidth: 800, height: 300}}>
-                            <Drawer ref={'drawer1'} content={<Text>drawer here</Text>}>
+              {`<View style={{height: 300, flex: 1, overflow: 'hidden'}}>
+                            <Drawer ref={'drawer1'} content={
+                                <View>
+                                    <DrawerHeader title={'my app'}/>
+                                    <DrawerItem icon='home' name='Home'/>
+                                    <DrawerItem isHeader name='Profile'/>
+                                    <DrawerItem icon='security' name='Edit'/>
+                                    <DrawerFooter text={'my copyleft'}/>
+                                </View>
+                            }>
                                 <View>
                                     <Text>body here</Text>
-                                    <Button title={'Toggle drawer'} onPress={() => {
-                                        this.refs.drawer1.toggle();
-                                    }}/>
+                                    <Button
+                                        type='primary'
+                                        title={'Toggle drawer'}
+                                        onPress={() => {
+                                            this.refs.drawer1.toggle();
+                                        }}
+                                    />
                                 </View>
                             </Drawer>
                         </View>`}
@@ -82,16 +125,25 @@ export default class DrawerScene extends React.Component<Props, State> {
 
             <ViewSpacer />
             <Text>{_('Max Width')}</Text>
-            <View style={{ width: 800, flex: 1, height: 300 }}>
+            <View style={{ height: 300, flex: 1 }}>
               <Drawer
                 useTabledMode
                 tabledModeMinWidth={300}
                 ref={'drawer2'}
-                content={<Text>drawer here</Text>}
+                content={
+                  <View>
+                    <DrawerHeader title={'my app'} />
+                    <DrawerItem icon='home' name='Home' />
+                    <DrawerItem isHeader name='Profile' />
+                    <DrawerItem icon='security' name='Edit' />
+                    <DrawerFooter text={'my copyleft'} />
+                  </View>
+                }
               >
                 <View>
                   <Text>body here</Text>
                   <Button
+                    type='primary'
                     title={'Toggle drawer'}
                     onPress={() => {
                       this.refs.drawer2.toggle();
@@ -102,13 +154,30 @@ export default class DrawerScene extends React.Component<Props, State> {
             </View>
 
             <Code>
-              {`<View style={{maxWidth: 800, height: 300}}>
-                            <Drawer useTabledMode tabledModeMinWidth={300} ref={'drawer2'} content={<Text>drawer here</Text>}>
+              {` <View style={{height: 300, flex: 1, overflow: 'hidden'}}>
+                            <Drawer
+                                useTabledMode
+                                tabledModeMinWidth={300}
+                                ref={'drawer2'}
+                                content={
+                                    <View>
+                                        <DrawerHeader title={'my app'}/>
+                                        <DrawerItem icon='home' name='Home'/>
+                                        <DrawerItem isHeader name='Profile'/>
+                                        <DrawerItem icon='security' name='Edit'/>
+                                        <DrawerFooter text={'my copyleft'}/>
+                                    </View>
+                                }
+                            >
                                 <View>
                                     <Text>body here</Text>
-                                    <Button title={'Toggle drawer'} onPress={() => {
-                                        this.refs.drawer2.toggle();
-                                    }}/>
+                                    <Button
+                                        type='primary'
+                                        title={'Toggle drawer'}
+                                        onPress={() => {
+                                            this.refs.drawer2.toggle();
+                                        }}
+                                    />
                                 </View>
                             </Drawer>
                         </View>`}
@@ -129,6 +198,37 @@ export default class DrawerScene extends React.Component<Props, State> {
     tabledModeMinWidth?: number;
     onOpenStart?: () => void;
     onCloseStart?: () => void;
+}
+
+interface DrawerFooterProps extends ViewStyle {
+  children?: JSX.Element;
+  text?: string;
+  icon?: string;
+  style?: ViewStyle;
+  iconStyle?: TextStyle;
+  textStyle?: TextStyle;
+}
+interface DrawerHeaderProps extends ViewStyle {
+  children?: JSX.Element | JSX.Element[];
+  title?: string;
+  logo?: ImageURISource;
+  style?: ViewStyle;
+  logoStyle?: TextStyle;
+  titleStyle?: TextStyle;
+}
+
+interface DrawerItemProps extends ViewStyle {
+  children?: JSX.Element;
+  rightView?: JSX.Element;
+  name: string;
+  isHeader?: boolean;
+  isActive?: boolean;
+  icon?: string;
+  style?: ViewStyle;
+  iconStyle?: TextStyle;
+  nameStyle?: TextStyle;
+  headerStyle?: TextStyle;
+  onPress?: () => void;
 }`}
             </Code>
           </PropertiesContainer>
