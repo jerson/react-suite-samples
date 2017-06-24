@@ -23,6 +23,10 @@ export interface Props {}
 export interface State {}
 
 export default class DrawerScene extends React.Component<Props, State> {
+  refs: {
+    [string: string]: any;
+  };
+
   render() {
     return (
       <SceneContainer>
@@ -49,9 +53,16 @@ export default class DrawerScene extends React.Component<Props, State> {
 
             <ViewSpacer />
             <Text>{_('Basic')}</Text>
-            <View style={{ maxWidth: 800, height: 300 }}>
+            <View
+              style={{
+                maxWidth: 800,
+                overflow: 'hidden',
+                flex: 1,
+                height: 300
+              }}
+            >
               <Drawer ref={'drawer1'} content={<Text>drawer here</Text>}>
-                <View>
+                <View style={{ flex: 1 }}>
                   <Text>body here</Text>
                   <Button
                     title={_('Toggle drawer')}
@@ -78,14 +89,21 @@ export default class DrawerScene extends React.Component<Props, State> {
 
             <ViewSpacer />
             <Text>{_('Max Width')}</Text>
-            <View style={{ maxWidth: 800, height: 300 }}>
+            <View
+              style={{
+                maxWidth: 800,
+                overflow: 'hidden',
+                flex: 1,
+                height: 300
+              }}
+            >
               <Drawer
                 useTabledMode
                 tabledModeMinWidth={300}
                 ref={'drawer2'}
                 content={<Text>drawer here</Text>}
               >
-                <View>
+                <View style={{ flex: 1 }}>
                   <Text>body here</Text>
                   <Button
                     title={_('Toggle drawer')}
