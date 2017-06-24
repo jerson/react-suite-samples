@@ -38,6 +38,11 @@ export default class DrawerContent extends React.Component<Props, State> {
         onPress: this.goTo.bind(this, '/linear-gradient')
       },
       {
+        icon: 'menu',
+        name: _('Header'),
+        onPress: this.goTo.bind(this, '/header')
+      },
+      {
         icon: 'blur_on',
         name: _('BlurImage'),
         onPress: this.goTo.bind(this, '/blur-image')

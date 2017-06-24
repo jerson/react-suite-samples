@@ -49,6 +49,7 @@ export default class IconScene extends React.Component<Props, State> {
 
           <SamplesContainer>
             <Title size='normal'>{_('Examples')}</Title>
+            <Text>{_('More icon names:')} material.io/icons/</Text>
 
             <ViewSpacer />
             <Text>{_('Basic')}</Text>
