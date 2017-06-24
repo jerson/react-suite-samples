@@ -1,21 +1,13 @@
-import LabelScene from '../../scenes/components/LabelScene';
-
 import * as React from 'react';
 import { ScrollViewStyle, StyleSheet, ViewStyle } from 'react-native';
 import { _, ScrollView } from 'react-suite';
 import DrawerFooter from 'react-suite/build/components/ui/DrawerFooter';
 import DrawerHeader from 'react-suite/build/components/ui/DrawerHeader';
-import { DrawerItemProps } from 'react-suite/build/components/ui/DrawerItem';
+import DrawerItem, { DrawerItemProps } from 'react-suite/build/components/ui/DrawerItem';
 import Image from 'react-suite/build/components/ui/Image';
 import LinearGradient from 'react-suite/build/components/ui/LinearGradient';
 import StatusBarView from 'react-suite/build/components/ui/StatusBarView';
 import View from 'react-suite/build/components/ui/View';
-import DrawerHeader from 'react-suite/build/components/ui/DrawerHeader';
-import DrawerFooter from 'react-suite/build/components/ui/DrawerFooter';
-import DrawerItem, { DrawerItemProps } from 'react-suite/build/components/ui/DrawerItem';
-import LinearGradient from 'react-suite/build/components/ui/LinearGradient';
-import Image from 'react-suite/build/components/ui/Image';
-import StatusBarView from 'react-suite/build/components/ui/StatusBarView';
 import Label from 'react-suite/build/components/ui/Label';
 
 const PropTypes = require('prop-types');
