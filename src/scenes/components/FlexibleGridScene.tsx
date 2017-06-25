@@ -37,7 +37,7 @@ export default class FlexibleGridScene extends React.Component<Props, State> {
   }
 
   async componentDidMount() {
-    Screen.init();
+    //Screen.init();
     let dataSource = new ListView.DataSource({
       rowHasChanged: (r1: any, r2: any) => {
         return r1 !== r2;

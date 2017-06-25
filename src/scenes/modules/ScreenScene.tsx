@@ -38,7 +38,7 @@ export default class ScreenScene extends React.Component<Props, State> {
   onOrientationChangeListener: string;
 
   componentDidMount() {
-    Screen.init();
+    //Screen.init();
     this.onDimensionsChangeListener = Emitter.on(
       'onDimensionsChange',
       this.onDimensionsChange.bind(this)
@@ -54,7 +54,7 @@ export default class ScreenScene extends React.Component<Props, State> {
   componentWillUnmount() {
     Emitter.off(this.onDimensionsChangeListener);
     Emitter.off(this.onOrientationChangeListener);
-    Screen.destroy();
+    //Screen.destroy();
   }
 
   onDimensionsChange(size: Dimensions) {
@@ -69,9 +69,9 @@ export default class ScreenScene extends React.Component<Props, State> {
     this.setState({ orientation });
   }
 
-  getData() {
-    Screen.updateOrientation();
-    Screen.updateDimensions();
+  async getData() {
+    this.onDimensionsChange(await Screen.updateDimensions());
+    this.onOrientationChange(await Screen.updateOrientation());
   }
 
   render() {

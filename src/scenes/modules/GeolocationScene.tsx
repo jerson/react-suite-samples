@@ -54,8 +54,8 @@ export default class GeolocationScene extends React.Component<Props, State> {
     this.setState({ coordinates: JSON.stringify(jsonData) });
   }
 
-  getData() {
-    Geolocation.updateLocation();
+  async getData() {
+    this.onLocationChange(await Geolocation.updateLocation());
   }
 
   render() {

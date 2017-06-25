@@ -37,7 +37,7 @@ export default class ModalCenterScene extends React.Component<Props, State> {
   };
 
   async componentDidMount() {
-    Screen.init();
+    //Screen.init();
     /* await this.showConfirm();
                          await this.showConfirm({ body: <Text>hola mundo</Text> });
                          await this.showConfirm({ title: _('Sample title'), autoDismiss: 1 });
@@ -56,7 +56,7 @@ export default class ModalCenterScene extends React.Component<Props, State> {
   }
 
   componentWillUnmount() {
-    Screen.destroy();
+    //Screen.destroy();
   }
 
   showDefault(options?: Modal) {

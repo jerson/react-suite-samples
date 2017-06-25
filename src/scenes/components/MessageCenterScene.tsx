@@ -35,7 +35,7 @@ export default class MessageCenterScene extends React.Component<Props, State> {
   };
 
   async componentDidMount() {
-    Screen.init();
+    //Screen.init();
     // await this.show();
     // await this.show({ isLoading: true });
     // await this.show({ isLoading: true, autoDismiss: 1 });
@@ -44,7 +44,7 @@ export default class MessageCenterScene extends React.Component<Props, State> {
   }
 
   componentWillUnmount() {
-    Screen.destroy();
+    //Screen.destroy();
   }
 
   show(options?: Message) {

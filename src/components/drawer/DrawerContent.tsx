@@ -56,8 +56,7 @@ export default class DrawerContent extends React.Component<Props, State> {
       {
         icon: 'menu',
         name: _('Drawer'),
-        onPress: this.goTo.bind(this, '/drawer'),
-        rightView: <Label hideIcon type='warning' title={_('Partial')} />
+        onPress: this.goTo.bind(this, '/drawer')
       },
       {
         icon: 'more_vert',
@@ -141,8 +140,7 @@ export default class DrawerContent extends React.Component<Props, State> {
       {
         icon: 'location_on',
         name: _('Geolocation'),
-        onPress: this.goTo.bind(this, '/geolocation'),
-        rightView: <Label hideIcon type='warning' title={_('Partial')} />
+        onPress: this.goTo.bind(this, '/geolocation')
       },
       {
         icon: 'web',

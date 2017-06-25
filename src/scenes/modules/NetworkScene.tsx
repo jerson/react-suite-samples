@@ -49,8 +49,8 @@ export default class NetworkScene extends React.Component<Props, State> {
     this.setState({ type: type });
   }
 
-  getData() {
-    Network.updateNetworkType();
+  async getData() {
+    this.onNetworkStateChange(await Network.updateNetworkType());
   }
 
   render() {

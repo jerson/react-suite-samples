@@ -62,16 +62,41 @@ export default class DrawerScene extends React.Component<Props, State> {
 
             <ViewSpacer />
             <Text>{_('Basic')}</Text>
-            <View style={{ height: 300, width: 300, position: 'relative' }}>
-              <View
-                style={{
-                  position: 'absolute',
-                  left: 0,
-                  top: 0,
-                  bottom: 0,
-                  right: 0
-                }}
+            <View
+              style={{
+                height: 300,
+                flex: 1,
+                overflow: 'hidden',
+                position: 'relative'
+              }}
+            >
+              <Drawer
+                ref={'drawer1'}
+                content={
+                  <View>
+                    <DrawerHeader title={'my app'} />
+                    <DrawerItem icon='home' name='Home' />
+                    <DrawerItem isHeader name='Profile' />
+                    <DrawerItem icon='security' name='Edit' />
+                    <DrawerFooter text={'my copyleft'} />
+                  </View>
+                }
               >
+                <View>
+                  <Text>body here</Text>
+                  <Button
+                    type='primary'
+                    title={'Toggle drawer'}
+                    onPress={() => {
+                      this.refs.drawer1.toggle();
+                    }}
+                  />
+                </View>
+              </Drawer>
+            </View>
+
+            <Code>
+              {`<View style={{ height: 300, flex: 1, overflow: 'hidden', position: 'relative' }}>
                 <Drawer
                   ref={'drawer1'}
                   content={
@@ -95,37 +120,19 @@ export default class DrawerScene extends React.Component<Props, State> {
                     />
                   </View>
                 </Drawer>
-              </View>
-            </View>
-
-            <Code>
-              {`<View style={{height: 300, flex: 1, overflow: 'hidden'}}>
-                            <Drawer ref={'drawer1'} content={
-                                <View>
-                                    <DrawerHeader title={'my app'}/>
-                                    <DrawerItem icon='home' name='Home'/>
-                                    <DrawerItem isHeader name='Profile'/>
-                                    <DrawerItem icon='security' name='Edit'/>
-                                    <DrawerFooter text={'my copyleft'}/>
-                                </View>
-                            }>
-                                <View>
-                                    <Text>body here</Text>
-                                    <Button
-                                        type='primary'
-                                        title={'Toggle drawer'}
-                                        onPress={() => {
-                                            this.refs.drawer1.toggle();
-                                        }}
-                                    />
-                                </View>
-                            </Drawer>
-                        </View>`}
+            </View>`}
             </Code>
 
             <ViewSpacer />
             <Text>{_('Max Width')}</Text>
-            <View style={{ height: 300, flex: 1 }}>
+            <View
+              style={{
+                height: 300,
+                flex: 1,
+                overflow: 'hidden',
+                position: 'relative'
+              }}
+            >
               <Drawer
                 useTabledMode
                 tabledModeMinWidth={300}
@@ -154,33 +161,33 @@ export default class DrawerScene extends React.Component<Props, State> {
             </View>
 
             <Code>
-              {` <View style={{height: 300, flex: 1, overflow: 'hidden'}}>
-                            <Drawer
-                                useTabledMode
-                                tabledModeMinWidth={300}
-                                ref={'drawer2'}
-                                content={
-                                    <View>
-                                        <DrawerHeader title={'my app'}/>
-                                        <DrawerItem icon='home' name='Home'/>
-                                        <DrawerItem isHeader name='Profile'/>
-                                        <DrawerItem icon='security' name='Edit'/>
-                                        <DrawerFooter text={'my copyleft'}/>
-                                    </View>
-                                }
-                            >
-                                <View>
-                                    <Text>body here</Text>
-                                    <Button
-                                        type='primary'
-                                        title={'Toggle drawer'}
-                                        onPress={() => {
-                                            this.refs.drawer2.toggle();
-                                        }}
-                                    />
-                                </View>
-                            </Drawer>
-                        </View>`}
+              {`<View style={{ height: 300, flex: 1, overflow: 'hidden', position: 'relative' }}>
+              <Drawer
+                useTabledMode
+                tabledModeMinWidth={300}
+                ref={'drawer2'}
+                content={
+                  <View>
+                    <DrawerHeader title={'my app'} />
+                    <DrawerItem icon='home' name='Home' />
+                    <DrawerItem isHeader name='Profile' />
+                    <DrawerItem icon='security' name='Edit' />
+                    <DrawerFooter text={'my copyleft'} />
+                  </View>
+                }
+              >
+                <View>
+                  <Text>body here</Text>
+                  <Button
+                    type='primary'
+                    title={'Toggle drawer'}
+                    onPress={() => {
+                      this.refs.drawer2.toggle();
+                    }}
+                  />
+                </View>
+              </Drawer>
+            </View>`}
             </Code>
 
           </SamplesContainer>
