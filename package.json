@@ -48,7 +48,7 @@
         "react-native-web": "^0.0.96",
         "react-router-dom": "^4.1.1",
         "react-router-native": "^4.1.1",
-        "react-suite": "^0.0.140-dev",
+        "react-suite": "^0.1.0",
         "realm": "^1.3.1",
         "tinycolor2": "^1.4.1"
     },
