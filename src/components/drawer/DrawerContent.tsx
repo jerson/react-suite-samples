@@ -96,8 +96,7 @@ export default class DrawerContent extends React.Component<Props, State> {
       {
         icon: 'view_carousel',
         name: _('ModalCenter'),
-        onPress: this.goTo.bind(this, '/modal-center'),
-        rightView: <Label hideIcon type='warning' title={_('Partial')} />
+        onPress: this.goTo.bind(this, '/modal-center')
       },
       {
         icon: 'forum',
@@ -113,7 +112,7 @@ export default class DrawerContent extends React.Component<Props, State> {
         icon: 'trending_flat',
         name: _('Slider'),
         onPress: this.goTo.bind(this, '/slider'),
-        rightView: <Label hideIcon type='danger' title={_('Incomplete')} />
+        rightView: <Label hideIcon type='warning' title={_('Partial')} />
       },
       {
         isHeader: true,
