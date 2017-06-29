@@ -91,8 +91,7 @@ export default class DrawerContent extends React.Component<Props, State> {
       {
         icon: 'view_module',
         name: _('FlexibleGrid'),
-        onPress: this.goTo.bind(this, '/flexible-grid'),
-        rightView: <Label hideIcon type='warning' title={_('Partial')} />
+        onPress: this.goTo.bind(this, '/flexible-grid')
       },
       {
         icon: 'view_carousel',
@@ -108,8 +107,7 @@ export default class DrawerContent extends React.Component<Props, State> {
       {
         icon: 'remove',
         name: _('ProgressBar'),
-        onPress: this.goTo.bind(this, '/progress-bar'),
-        rightView: <Label hideIcon type='danger' title={_('Incomplete')} />
+        onPress: this.goTo.bind(this, '/progress-bar')
       },
       {
         icon: 'trending_flat',
@@ -124,8 +122,7 @@ export default class DrawerContent extends React.Component<Props, State> {
       {
         icon: 'account_box',
         name: _('Session'),
-        onPress: this.goTo.bind(this, '/session'),
-        rightView: <Label hideIcon type='warning' title={_('Partial')} />
+        onPress: this.goTo.bind(this, '/session')
       },
       {
         icon: 'translate',
