@@ -2,6 +2,8 @@ import * as React from 'react';
 import { StyleSheet, ViewStyle } from 'react-native';
 import { MessageCenter, ModalCenter, View } from 'react-suite';
 import Screen from 'react-suite/build/modules/listener/Screen';
+import Theme from 'react-suite/build/modules/theme/Theme';
+import Darker from './themes/Darker';
 
 const PropTypes = require('prop-types');
 
@@ -11,20 +13,20 @@ interface State {}
 
 export default class Main extends React.Component<Props, State> {
   static childContextTypes = {
-    noti: PropTypes.object,
+    message: PropTypes.object,
     modal: PropTypes.object
   };
   refs: {
     [string: string]: any;
-    noti: MessageCenter;
+    message: MessageCenter;
     modal: ModalCenter;
   };
 
   getChildContext() {
     return {
-      noti: {
+      message: {
         show: (params: any) => {
-          this.refs.noti && this.refs.noti.show(params);
+          this.refs.message && this.refs.message.show(params);
         }
       },
       modal: {
@@ -35,14 +37,17 @@ export default class Main extends React.Component<Props, State> {
     };
   }
 
+  componentWillMount() {
+    Theme.init({
+      defaultTheme: 'Darker',
+      themes: {
+        Darker
+      }
+    });
+  }
+
   componentDidMount() {
     Screen.init();
-    //Theme.init({
-    //    defaultTheme: 'Darker',
-    //    themes: {
-    //        Darker
-    //    }
-    //});
   }
 
   componentWillUnmount() {
@@ -53,7 +58,7 @@ export default class Main extends React.Component<Props, State> {
     return (
       <View style={styles.container}>
         {React.Children.only(this.props.children)}
-        <MessageCenter ref='noti' />
+        <MessageCenter ref='message' />
         <ModalCenter ref='modal' />
       </View>
     );

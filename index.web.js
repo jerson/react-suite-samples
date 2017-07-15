@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './build';
+import Darker from './build/themes/Darker';
+import Theme from 'react-suite/build/modules/theme/Theme';
+
+Theme.init({
+    defaultTheme: 'Darker',
+    themes: {
+        Darker
+    }
+});
 
 const mountApp = document.getElementById('root');
 
