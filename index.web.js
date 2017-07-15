@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './build';
 import Darker from './build/themes/Darker';
 import Theme from 'react-suite/build/modules/theme/Theme';
 
@@ -10,9 +9,11 @@ Theme.init({
         Darker
     }
 });
+Theme.setTheme('Darker');
+
 
 const mountApp = document.getElementById('root');
-
+const App = require('./build').default;
 ReactDOM.render(
     <App/>,
     mountApp

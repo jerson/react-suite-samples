@@ -1,12 +1,16 @@
-'use strict';
-
 import React, {Component} from 'react';
-import {
-    AppRegistry
-} from 'react-native';
-import App from './build';
+import {AppRegistry} from 'react-native';
+import Darker from './build/themes/Darker';
+import Theme from 'react-suite/build/modules/theme/Theme';
 import codePush from 'react-native-code-push';
-//let codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME };
+
+Theme.init({
+    defaultTheme: 'Darker',
+    themes: {
+        Darker
+    }
+});
+Theme.setTheme('Darker');
 
 class AppWindow extends Component {
 
@@ -20,7 +24,8 @@ class AppWindow extends Component {
     }
 
     render() {
-        return <App />;
+        const App = require('./build').default;
+        return <App/>;
     }
 }
 

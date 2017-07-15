@@ -6,22 +6,14 @@ import {
 
 const TinyColor = require('tinycolor2');
 
-// let toneColor = '#01060d';
 let toneColor = '#01060d';
-let tone2Color = '#121212';
-
-//let primaryColor = '#80e82f';
 let primaryColor = '#05ffee';
 let darkenPrimary = TinyColor(primaryColor).darken(7).toRgbString();
 
 let defaults: ThemeDefaultVars = {
   darkMode: true,
-  // primaryColor: '#80e82f',
   defaultColor: '#444',
   primaryColor,
-  // primaryColor: '#ff6c29',
-  // primaryColor: '#97ffc0',
-  // primaryColor: TinyColor(toneColor).lighten(56).toRgbString(),
   infoColor: darkenPrimary,
   successColor: darkenPrimary,
   dangerColor: '#ff312e',

@@ -19,7 +19,7 @@ interface State {}
 export default class DrawerContent extends React.Component<Props, State> {
   static contextTypes = {
     router: PropTypes.object.isRequired,
-    drawer: PropTypes.object.isRequired
+    drawer: PropTypes.object
   };
 
   getItems(): DrawerItemProps[] {

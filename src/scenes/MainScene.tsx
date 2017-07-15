@@ -16,8 +16,7 @@ interface State {}
 
 export default class MainScene extends React.Component<Props, State> {
   static contextTypes = {
-    router: PropTypes.object.isRequired,
-    drawer: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   };
 
   render() {

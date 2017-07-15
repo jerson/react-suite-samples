@@ -16,12 +16,7 @@ export default class Code extends React.Component<Props, State> {
     let { children, language, ...props } = this.props;
 
     return (
-      <View
-        style={[
-          styles.container,
-          Theme.vars.defaults.darkMode && { color: '#fff' }
-        ]}
-      >
+      <View style={[styles.container]}>
         <SyntaxHighlighter
           language={'typescript'}
           style={Theme.vars.defaults.darkMode ? tomorrowNight : docco}
