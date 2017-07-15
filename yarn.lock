@@ -5378,9 +5378,9 @@ react-native-linear-gradient@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.0.0.tgz#7442c00e1fcd9fca329119dcbaf744d12bcd1b5a"
 
-"react-native-orientation@git+https://github.com/Dudyboy/react-native-orientation.git":
+"react-native-orientation@git+https://github.com/yamill/react-native-orientation.git":
   version "1.17.0"
-  resolved "git+https://github.com/Dudyboy/react-native-orientation.git#1f470906aa4df2aab046dae37da47ab5155c587e"
+  resolved "git+https://github.com/yamill/react-native-orientation.git#ef221b5720ced0d9ed0c9de14082a5eabba4db7a"
 
 react-native-shared-preferences@^0.0.8:
   version "0.0.8"
@@ -5551,9 +5551,9 @@ react-router@^4.1.1:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
-react-suite@^0.0.140-dev:
-  version "0.0.140-dev"
-  resolved "https://registry.yarnpkg.com/react-suite/-/react-suite-0.0.140-dev.tgz#55c6f84ca5543ac706323476fe140530c4a6f716"
+react-suite@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-suite/-/react-suite-0.1.0.tgz#4278a70ddb684dedcd5f9cdf4f236f05a93386b5"
   dependencies:
     pubsub-js "^1.5.7"
     qs "^6.4.0"
