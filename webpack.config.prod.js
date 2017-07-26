@@ -3,11 +3,12 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: [
-        path.join(__dirname, 'index'),
-    ],
+    entry: {
+        app: path.join(__dirname, 'index'),
+        vendor: ['pouchdb-browser', 'react-suite', 'react', 'react-native-web', 'lodash', 'react-syntax-highlighter', 'lowlight', 'react-native', 'react-dom'],
+    },
     resolve: {
-        alias: { 'react-native': 'react-native-web' },
+        alias: {'react-native': 'react-native-web'},
         extensions: ['.webpack.js', '.web.js', '.js'],
     },
     output: {
@@ -23,8 +24,13 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: 'static/vendor.[hash].js',
+            publicPath: '/react-suite-samples/'
+        }),
         new webpack.optimize.UglifyJsPlugin({
-            output: { comments: false },
+            output: {comments: false},
             beautify: false,
             compressor: {
                 warnings: false

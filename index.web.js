@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import Darker from './build/themes/Darker';
 import Theme from 'react-suite/build/modules/theme/Theme';
 
-Theme.init({
-    defaultTheme: 'Darker',
-    themes: {
-        Darker
-    }
-});
-Theme.setTheme('Darker');
+// Theme.init({
+//     defaultTheme: 'Darker',
+//     themes: {
+//         Darker
+//     }
+// });
+// Theme.setTheme('Darker');
 
 
 const mountApp = document.getElementById('root');

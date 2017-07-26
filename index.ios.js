@@ -4,13 +4,13 @@ import Darker from './build/themes/Darker';
 import Theme from 'react-suite/build/modules/theme/Theme';
 import codePush from 'react-native-code-push';
 
-Theme.init({
-    defaultTheme: 'Darker',
-    themes: {
-        Darker
-    }
-});
-Theme.setTheme('Darker');
+// Theme.init({
+//     defaultTheme: 'Darker',
+//     themes: {
+//         Darker
+//     }
+// });
+// Theme.setTheme('Darker');
 
 class AppWindow extends Component {
 

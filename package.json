@@ -97,6 +97,7 @@
         "tsutils": "^2.3.0",
         "typescript": "^2.3.4",
         "webpack": "2.6.1",
+        "webpack-bundle-analyzer": "^2.8.3",
         "webpack-closure-compiler": "^2.1.4",
         "webpack-dev-server": "2.4.5",
         "webpack-manifest-plugin": "1.1.0"
