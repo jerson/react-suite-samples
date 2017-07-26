@@ -10,6 +10,7 @@
         "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
         "prebuild": "node node_modules/.bin/rimraf build",
         "build": "npm run tslint && tsc",
+        "watch": "npm run tslint && tsc --watch",
         "tslint": "tslint --project tsconfig.json -r tslint.json -r ./node_modules/tslint-microsoft-contrib --fix || true",
         "pretest": "npm run build",
         "format": "npm run prettier && npm run tslint",
