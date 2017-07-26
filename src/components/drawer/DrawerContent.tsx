@@ -213,9 +213,7 @@ export default class DrawerContent extends React.Component<Props, State> {
   render() {
     let items = this.getItems();
 
-    let logo = {
-      uri: 'https://image.ibb.co/k8c9Nk/logo.png'
-    };
+    let logo = require('../../../images/logo.png');
 
     return (
       <View style={styles.container}>
