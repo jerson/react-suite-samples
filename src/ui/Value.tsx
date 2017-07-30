@@ -1,14 +1,17 @@
 import * as React from 'react';
-import { StyleSheet, TextStyle } from 'react-native';
+import { TextStyle } from 'react-native';
 import Text from 'react-suite/build/components/ui/Text';
-import Theme from 'react-suite/build/modules/theme/Theme';
+import { ThemeVars } from 'react-suite/build/modules/theme/ThemeBuilder';
+import BaseComponent from 'react-suite/build/components/BaseComponent';
 
 interface Props {}
 
 interface State {}
 
-export default class Value extends React.Component<Props, State> {
+export default class Value extends BaseComponent<Props, State> {
   render() {
+    const { styles, theme } = this;
+
     return (
       <Text style={styles.container}>
 
@@ -17,13 +20,15 @@ export default class Value extends React.Component<Props, State> {
       </Text>
     );
   }
-}
 
-const styles = StyleSheet.create({
-  container: {
-    fontSize: 14,
-    fontWeight: '200',
-    textAlign: 'center',
-    margin: 10
-  } as TextStyle
-});
+  loadStyles(theme: ThemeVars) {
+    return {
+      container: {
+        fontSize: 14,
+        fontWeight: '200',
+        textAlign: 'center',
+        margin: 10
+      } as TextStyle
+    };
+  }
+}

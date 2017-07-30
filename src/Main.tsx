@@ -56,11 +56,11 @@ export default class Main extends React.Component<Props, State> {
         Default
       }
     });
-    let val = true;
+    /* let val = true;
     setInterval(() => {
       val = !val;
       Theme.setTheme(val ? 'Default' : 'Darker');
-    }, 1000 * 1);
+    }, 1000 * 1);*/
   }
 
   async onThemeChange(theme: string) {

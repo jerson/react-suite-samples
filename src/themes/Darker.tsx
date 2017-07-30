@@ -1,43 +1,34 @@
-import {
-  default as ThemeBuilder,
+import ThemeBuilder, {
   ThemeDefaultVars,
   ThemeVars
 } from 'react-suite/build/modules/theme/ThemeBuilder';
 
-const TinyColor = require('tinycolor2');
-
-let toneColor = '#01060d';
-let primaryColor = '#05ffee';
-let darkenPrimary = TinyColor(primaryColor).darken(7).toRgbString();
-
 let defaults: ThemeDefaultVars = {
-  darkMode: true,
-  defaultColor: '#444',
-  primaryColor,
-  infoColor: darkenPrimary,
-  successColor: darkenPrimary,
-  dangerColor: '#ff312e',
-  warningColor: '#f48024',
+  darkMode: false,
 
-  textShadowColor: 'rgba(0,0,0,0.7)',
+  defaultColor: '#3084cf',
+  primaryColor: '#7367F0',
+  dangerColor: '#EA5455',
+  warningColor: '#F8D800',
+  infoColor: '#0396FF',
+  successColor: '#28C76F',
+
+  textShadowColor: '#000',
   shadowColor: '#000',
 
-  textColor: '#fff',
-  textSecondaryColor: TinyColor(toneColor)
-    .lighten(90)
-    .setAlpha(0.5)
-    .toRgbString(),
+  textColor: '#222',
+  textSecondaryColor: '#4c547a',
 
-  textActiveColor: '#fff',
-  textActiveSecondaryColor: 'rgba(255,255,255,0.8)',
+  textActiveColor: '#4363cf',
+  textActiveSecondaryColor: 'rgba(255,255,255,0.7)',
 
-  backgroundColor: TinyColor(toneColor).lighten(3).toRgbString(),
-  backgroundSecondaryColor: TinyColor(toneColor).lighten(5).toRgbString(),
+  backgroundColor: '#f0f9fb',
+  backgroundSecondaryColor: '#d2ecfb',
 
-  backgroundDarkenColor: TinyColor(toneColor).darken(3).toRgbString(),
+  backgroundDarkenColor: '#000',
 
-  borderColor: TinyColor(toneColor).lighten(5).toRgbString(),
-  borderSecondaryColor: TinyColor(toneColor).lighten(3).toRgbString()
+  borderColor: '#f9f9f9',
+  borderSecondaryColor: '#fafafa'
 };
 let theme: ThemeVars = ThemeBuilder.build(defaults);
 export default theme;

@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { StyleSheet, ViewStyle } from 'react-native';
+import { ViewStyle } from 'react-native';
 import View from 'react-suite/build/components/ui/View';
 import Theme from 'react-suite/build/modules/theme/Theme';
+import { ThemeVars } from 'react-suite/build/modules/theme/ThemeBuilder';
+import BaseComponent from 'react-suite/build/components/BaseComponent';
 
 interface Props extends ViewStyle {
   style?: ViewStyle;
@@ -9,16 +11,20 @@ interface Props extends ViewStyle {
 
 interface State {}
 
-export default class SceneContainer extends React.Component<Props, State> {
+export default class SceneContainer extends BaseComponent<Props, State> {
   render() {
     let { style, ...props } = this.props;
+    const { styles, theme } = this;
+
     return <View style={[styles.container, style]} {...props} />;
   }
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: Theme.vars.defaults.backgroundSecondaryColor
-  } as ViewStyle
-});
+  loadStyles(theme: ThemeVars) {
+    return {
+      container: {
+        flex: 1,
+        backgroundColor: theme.defaults.backgroundSecondaryColor
+      } as ViewStyle
+    };
+  }
+}
